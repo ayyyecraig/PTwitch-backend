@@ -5,7 +5,8 @@ module.exports = {
     return queryInterface.bulkInsert(
       'playlists',
       [{
-        userId: 0,
+        userId: 1,
+        streamerId: 1,
         createdAt: new Date(),
         updatedAt: new Date()
 

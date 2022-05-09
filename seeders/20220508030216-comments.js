@@ -6,8 +6,8 @@ module.exports = {
       'comments',
       [
         {
-          userId: 0,
-          playlistId: 0,
+          userId: 1,
+          playlistId: 1,
           content: "poggers",
           createdAt: new Date(),
           updatedAt: new Date()

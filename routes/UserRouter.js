@@ -5,4 +5,8 @@ Router.get(
     '/', controller.GetUser
 )
 
+Router.get(
+    '/:user_id', controller.GetUserById
+)
+
 module.exports = Router

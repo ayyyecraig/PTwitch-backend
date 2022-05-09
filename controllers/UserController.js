@@ -10,9 +10,20 @@ const GetUser = async (req, res) => {
     }
 }
 
+const  GetUserById = async (req, res) => {
+    try{
+        let userId = parseInt(req.params.user_id)
+        const user = await User.findOne({where: {id: userId}})
+        res.send(user)
+
+    } catch (error) {
+        throw error
+    }
+}
+
 
 
 module.exports = {
     GetUser,
-    // GetUserById
+    GetUserById
 }

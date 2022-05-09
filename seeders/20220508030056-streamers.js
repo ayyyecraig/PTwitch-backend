@@ -10,7 +10,7 @@ module.exports = {
          contentType: 'Chatting',
          schedule: 'Sunday, Wednesday, Tuesday, West Coast',
          img: 'https://i.ytimg.com/vi/MsD83nwwu5I/maxresdefault.jpg',
-         playlistId: 0,
+         playlistId: 1,
          createdAt: new Date(),
          updatedAt: new Date() 
         }
