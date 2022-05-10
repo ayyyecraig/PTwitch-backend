@@ -1,9 +1,9 @@
-const { Comment, User } = require('../models')
+const { Comment, User} = require('../models')
 
 const GetComment = async (req, res) => {
     try {
-        const comments = await Comment.findAll()
-        res.send(comments)
+        const comments = await Comment.findAll({attributes: ["content", "playlistId"]})
+        res.json(comments)
     } catch (error) {
         throw error
     }
@@ -13,10 +13,12 @@ const GetCommentById = async ( req, res) => {
     try{  
         console.log(req.params, "bananas")
         let commentId = parseInt(req.params.comment_id)
-        let comment = await Comment.findOne({where: {id: commentId}, include: User})
+        let comment = await Comment.findOne({where: {id: commentId}, 
+            include: User, attributes: ["content", "playlistId"]})
             res.send(comment)
-
+            console.log(comment)
     } catch (error) {
+
         throw error
     }
 }

@@ -2,7 +2,7 @@ const { Playlist, User } = require('../models')
 
 const GetPlaylist = async (req, res) => {
     try{
-        const playlists = await Playlist.findAll({ include: User})
+        const playlists = await Playlist.findAll({ include: User, attributes: ["streamerId"] })
         res.send(playlists)
     } catch (error){
         throw error
@@ -12,13 +12,40 @@ const GetPlaylist = async (req, res) => {
 const GetPlaylistDetails = async (req, res) => {
     try{
         let playlistId = parseInt(req.params.playlist_id)
-        const playlistDetail = await Playlist.findOne({where: {id: playlistId}, include: User})
+        const playlistDetail = await Playlist.findOne({where: {id: playlistId}, include: User, attributes: ["streamerId"]})
         res.send(playlistDetail)
     } catch (error) {
         throw error
     }
 }
+
+const CreatePlaylist = async (req,res) => {
+    try {
+        let userId = parseInt(req.params.user_id)
+        let createPlaylist ={
+            userId,
+            ...req.body
+        }
+        const playlist = await Playlist.create(createPlaylist)
+        res.send(playlist)
+    } catch (error) {
+        throw error
+    }
+}
+
+const UpdatePlaylist = async (req, res) => {
+    try {
+        let playlistId = parseInt(req.params.playlist_id)
+        const updatedPlaylist = await Playlist.update(req.body, { where: { id: playlistId} })
+        res.send(updatedPlaylist)
+    } catch (error) {
+        throw error
+    }
+}
+
 module.exports = {
     GetPlaylist,
-    GetPlaylistDetails
+    GetPlaylistDetails,
+    CreatePlaylist,
+    UpdatePlaylist
 }
