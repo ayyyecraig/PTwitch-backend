@@ -13,7 +13,16 @@ module.exports = {
          playlistId: 1,
          createdAt: new Date(),
          updatedAt: new Date() 
-        }
+        },
+        {
+          name: 'HasanPiker',
+          contentType: 'Chatting',
+          schedule: 'a lot',
+          img: 'https://i.ytimg.com/vi/qwMDOdR5MqQ/maxresdefault.jpg',
+          playlistId: 2,
+          createdAt: new Date(),
+          updatedAt: new Date() 
+         }
       ]
     )
     

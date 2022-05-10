@@ -11,6 +11,13 @@ module.exports = {
           content: "poggers",
           createdAt: new Date(),
           updatedAt: new Date()
+        },
+        {
+          userId: 2,
+          playlistId: 2,
+          content: "Based",
+          createdAt: new Date(),
+          updatedAt: new Date()
         }
       ],
     )
