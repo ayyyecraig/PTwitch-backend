@@ -11,9 +11,6 @@ module.exports = {
       userId: {
         type: Sequelize.INTEGER
       },
-      streamerId: {
-        type: Sequelize.INTEGER
-      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

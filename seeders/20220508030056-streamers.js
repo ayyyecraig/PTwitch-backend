@@ -7,19 +7,21 @@ module.exports = {
       [
         {
          name: 'PayMoneyWubby',
+         userId: 2,
+         playlistId: 1,
          contentType: 'Chatting',
          schedule: 'Sunday, Wednesday, Tuesday, West Coast',
          img: 'https://i.ytimg.com/vi/MsD83nwwu5I/maxresdefault.jpg',
-         playlistId: 1,
          createdAt: new Date(),
          updatedAt: new Date() 
         },
         {
           name: 'HasanPiker',
+          userId: 2,
+          playlistId: 1,
           contentType: 'Chatting',
           schedule: 'a lot',
           img: 'https://i.ytimg.com/vi/qwMDOdR5MqQ/maxresdefault.jpg',
-          playlistId: 2,
           createdAt: new Date(),
           updatedAt: new Date() 
          }

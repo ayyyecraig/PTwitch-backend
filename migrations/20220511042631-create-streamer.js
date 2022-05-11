@@ -11,6 +11,12 @@ module.exports = {
       name: {
         type: Sequelize.STRING
       },
+      userId: {
+        type: Sequelize.INTEGER
+      },
+      playlistId: {
+        type: Sequelize.INTEGER
+      },
       contentType: {
         type: Sequelize.STRING
       },
@@ -19,9 +25,6 @@ module.exports = {
       },
       img: {
         type: Sequelize.STRING
-      },
-      playlistId: {
-        type: Sequelize.INTEGER
       },
       createdAt: {
         allowNull: false,

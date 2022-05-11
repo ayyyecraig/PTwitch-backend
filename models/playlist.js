@@ -10,28 +10,25 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // define association here
+  
+   
       Playlist.belongsTo(models.User, { foreignKey:'userId'})
-      Playlist.hasMany(models.Streamer, { foreignKey:'streamerId'})
+      Playlist.hasMany(models.Streamer, {foreignKey:'playlistId'})
     }
   }
   Playlist.init({
-    userId:{     type:DataTypes.INTEGER,
-      onDelete:'CASCADE',
-      references: {
-        model: 'users',
-        key: 'id'},
-    streamerId: {type:DataTypes.INTEGER,
-      onDelete:'CASCADE',
-      references: {
-        model: 'streamers',
-        key: 'id'}
-      }
-    }
+    userId:{ type:DataTypes.INTEGER,
+              onDelete:'CASCADE',
+              references: {
+                model: 'users',
+                foreignKey: 'id'
+              }
+             },         
   }, {
     sequelize,
     modelName: 'Playlist',
-    tableName: 'playlists'
+    tableName:'playlists'
   });
   return Playlist;
 };
+

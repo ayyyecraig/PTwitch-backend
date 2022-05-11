@@ -1,9 +1,13 @@
-const { User } = require('../models')
+const { User, Playlist} = require('../models')
+
 
 
 const GetUser = async (req, res) => {
     try {
-        const allUsers = await User.findAll()
+        const allUsers = await User.findAll( {
+            include: [{model: Playlist}] 
+        })
+        console.log(allUsers)
         res.send(allUsers)
     } catch (error) {
         throw error

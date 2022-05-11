@@ -6,7 +6,6 @@ module.exports = {
       'playlists',
       [{
         userId: 1,
-        streamerId: 1,
         createdAt: new Date(),
         updatedAt: new Date()
 

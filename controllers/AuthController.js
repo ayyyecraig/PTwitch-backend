@@ -2,13 +2,14 @@ const middleware = require('../middleware')
 const { User } = require('../models')
 
 const Login = async (req, res) => {
+
     try {
-        const user = await User.findOne({ where: { email: req.body.email }, raw: true})
+        const user = await User.findOne({ where: { email: req.body.email }})
             if ( 
                 user &&
-                (await middleware.comparePassword(user.passwordDigest, req.body.password)) ){
+                (await middleware.comparePassword(user.passwordDigest, req.body.passwordDigest)) ){
                     let payload = {
-                        is: user.id,
+                        id: user.id,
                         email: user.email
                     }
                     let token = middleware.createToken(payload)

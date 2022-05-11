@@ -1,8 +1,8 @@
-const { Playlist, User } = require('../models')
+const { Playlist, User, Streamer} = require('../models')
 
 const GetPlaylist = async (req, res) => {
     try{
-        const playlists = await Playlist.findAll({ include: User, attributes: ["streamerId"] })
+        let playlists = await Playlist.findAll()
         res.send(playlists)
     } catch (error){
         throw error
@@ -12,7 +12,7 @@ const GetPlaylist = async (req, res) => {
 const GetPlaylistDetails = async (req, res) => {
     try{
         let playlistId = parseInt(req.params.playlist_id)
-        const playlistDetail = await Playlist.findOne({where: {id: playlistId}, include: User, attributes: ["streamerId"]})
+        const playlistDetail = await Playlist.findOne({where: {id: playlistId}, include: Streamer})
         res.send(playlistDetail)
     } catch (error) {
         throw error
