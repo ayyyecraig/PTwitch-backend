@@ -1,5 +1,5 @@
 
-const { Streamer } = require('../models')
+const { Streamer, User } = require('../models')
 
 const GetStreamers = async (req, res) => {
     try {
@@ -21,7 +21,23 @@ const GetStreamerDetails = async (req, res) => {
         throw error
     }
 }
+
+const AddStreamer = async (req, res) => {
+    try {
+        let userId = parseInt(req.params.user_id)
+
+        let streamerDets = {
+            userId, ...req.body
+        }
+        const streamer = await Streamer.add(streamerDets)
+        res.send(streamer)
+    } catch (error) {
+        throw error
+    }
+}
+
 module.exports = {
     GetStreamers,
-    GetStreamerDetails
+    GetStreamerDetails,
+    AddStreamer
 }
