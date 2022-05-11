@@ -4,10 +4,11 @@ const { User } = require('../models')
 const Login = async (req, res) => {
 
     try {
-        const user = await User.findOne({ where: { email: req.body.email }})
+        const user = await User.findOne({ where: { email: req.body.email },
+            raw: true})
             if ( 
                 user &&
-                (await middleware.comparePassword(user.passwordDigest, req.body.passwordDigest)) ){
+                (await middleware.comparePassword(user.passwordDigest, req.body.password)) ){
                     let payload = {
                         id: user.id,
                         email: user.email
