@@ -4,7 +4,7 @@ const { Streamer, User } = require('../models')
 const GetStreamers = async (req, res) => {
     try {
 
-        const streamers = await Streamer.findAll({attributes: ["contentType", "name", "schedule", "img"]})
+        const streamers = await Streamer.findAll({attributes: ["id","contentType", "name", "schedule", "img"]})
         console.log(streamers)
         res.send(streamers)
     } catch (error) {
@@ -25,10 +25,11 @@ const GetStreamerDetails = async (req, res) => {
 
 const AddStreamer = async (req, res) => {
     try {
-        let playlistId = parseInt(req.params.playlist_id)
+        let userId = parseInt(req.params.user_id)
 
         let streamerList = {
-            playlistId, ...req.body
+            userId,
+             ...req.body
         }
         const streamer = await Streamer.update(streamerList)
         res.send(streamer)
@@ -37,8 +38,21 @@ const AddStreamer = async (req, res) => {
     }
 }
 
+
+const DeleteStreamer = async (req, res) => {
+    try {
+        let streamerId = parseInt(req.params.streamer_id)
+
+        await Streamer.destroy({ where: { id: streamerId } })
+        res.send({ message: ` You have removed streamer $streamerId`})
+    } catch (error) {
+        throw error
+    }
+}
+
 module.exports = {
     GetStreamers,
     GetStreamerDetails,
-    AddStreamer
+    AddStreamer,
+    DeleteStreamer
 }

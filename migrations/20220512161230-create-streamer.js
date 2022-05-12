@@ -14,9 +14,6 @@ module.exports = {
       userId: {
         type: Sequelize.INTEGER
       },
-      playlistId: {
-        type: Sequelize.INTEGER
-      },
       contentType: {
         type: Sequelize.STRING
       },

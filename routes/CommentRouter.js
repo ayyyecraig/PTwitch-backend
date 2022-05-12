@@ -2,7 +2,7 @@ const Router = require('express').Router()
 const controller = require('../controllers/CommentController')
 const middleware = require('../middleware')
 
-Router.get('/', controller.GetComment)
+Router.get('/streamers/:comment_id', controller.GetComment)
 
 Router.get('/:comment_id', controller.GetCommentById)
 
