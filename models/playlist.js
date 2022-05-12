@@ -23,7 +23,8 @@ module.exports = (sequelize, DataTypes) => {
                 model: 'users',
                 foreignKey: 'id'
               }
-             },         
+             },
+    name: DataTypes.STRING              
   }, {
     sequelize,
     modelName: 'Playlist',
