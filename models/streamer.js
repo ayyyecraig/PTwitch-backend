@@ -12,7 +12,7 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       Streamer.belongsTo(models.Playlist, {foreignKey:'playlistId'})
       Streamer.belongsTo(models.User, { foreignKey:'userId'})
-
+   
     }
   }
   Streamer.init({

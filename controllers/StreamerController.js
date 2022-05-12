@@ -22,14 +22,15 @@ const GetStreamerDetails = async (req, res) => {
     }
 }
 
+
 const AddStreamer = async (req, res) => {
     try {
-        let userId = parseInt(req.params.user_id)
+        let playlistId = parseInt(req.params.playlist_id)
 
-        let streamerDets = {
-            userId, ...req.body
+        let streamerList = {
+            playlistId, ...req.body
         }
-        const streamer = await Streamer.add(streamerDets)
+        const streamer = await Streamer.update(streamerList)
         res.send(streamer)
     } catch (error) {
         throw error
