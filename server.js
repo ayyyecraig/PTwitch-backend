@@ -3,7 +3,7 @@ const express = require('express')
 const cors = require('cors')
 const app = express()
 const AppRouter = require('./routes/AppRouter')
-
+const bodyParser = require('body-parser')
 
 
 const PORT = process.env.PORT || 3001
