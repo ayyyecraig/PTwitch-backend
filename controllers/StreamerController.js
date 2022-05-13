@@ -15,7 +15,9 @@ const GetStreamers = async (req, res) => {
 const GetStreamerDetails = async (req, res) => {
     try{
         let streamerId = parseInt(req.params.streamer_id)
-        const streamerDetails = await Streamer.findOne({ where:{id: streamerId}, attributes: ["contentType", "name", "schedule", "img"]})
+        // console.log(typeof streamerId)
+        const streamerDetails = await Streamer.findOne({ where:{id: streamerId}})
+        console.log(streamerDetails)
         res.send(streamerDetails)
     } catch (error){
         throw error
