@@ -3,7 +3,7 @@ const { Comment, User} = require('../models')
 const GetComment = async (req, res) => {
     try {
         const comments = await Comment.findAll({attributes: ["content", "streamerId"]})
-        res.json(comments)
+        res.send(comments)
     } catch (error) {
         throw error
     }
