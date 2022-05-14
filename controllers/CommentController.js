@@ -25,6 +25,7 @@ const GetCommentById = async ( req, res) => {
 const PostComment = async (req, res) => {
     try {
         let userId = parseInt(req.params.user_id)
+        console.log(req.params.user_id, "here")
         let streamerId = parseInt(req.params.streamer_id)
         let newComment = {
             userId,

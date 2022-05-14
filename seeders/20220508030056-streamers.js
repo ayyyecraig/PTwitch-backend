@@ -11,6 +11,7 @@ module.exports = {
          contentType: 'Chatting',
          schedule: 'Sunday, Wednesday, Tuesday, West Coast',
          img: 'https://i.ytimg.com/vi/MsD83nwwu5I/maxresdefault.jpg',
+         status: true,
          createdAt: new Date(),
          updatedAt: new Date() 
         },
@@ -20,6 +21,7 @@ module.exports = {
           contentType: 'Chatting',
           schedule: 'a lot',
           img: 'https://i.ytimg.com/vi/qwMDOdR5MqQ/maxresdefault.jpg',
+          status: true,
           createdAt: new Date(),
           updatedAt: new Date() 
          }

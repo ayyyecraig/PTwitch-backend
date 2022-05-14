@@ -23,7 +23,8 @@ module.exports = (sequelize, DataTypes) => {
      },         
     contentType: DataTypes.STRING,
     schedule: DataTypes.STRING,
-    img: DataTypes.STRING
+    img: DataTypes.STRING,
+    status: DataTypes.BOOLEAN
   }, {
     sequelize,
     modelName: 'Streamer',

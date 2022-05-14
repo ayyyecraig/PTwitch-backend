@@ -5,7 +5,6 @@ const GetStreamers = async (req, res) => {
     try {
 
         const streamers = await Streamer.findAll({attributes: ["id","contentType", "name", "schedule", "img"]})
-        console.log(streamers)
         res.send(streamers)
     } catch (error) {
         throw error
