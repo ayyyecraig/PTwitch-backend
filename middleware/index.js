@@ -33,7 +33,7 @@ const verifyToken = (req, res, next) => {
   }
 }
 
-const stripToken = (req, res, next) => { console.log("strptoken")
+const stripToken = (req, res, next) => { 
   try {
     const token = req.headers['authorization'].split(' ')[1]
     if (token) {

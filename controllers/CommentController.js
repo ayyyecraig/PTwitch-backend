@@ -11,11 +11,11 @@ const GetComment = async (req, res) => {
 
 const GetCommentById = async ( req, res) => {
     try{  
-        console.log("i am here")
+     
         let commentId = parseInt(req.params.comment_id)
         let comment = await Comment.findOne({where: {id: commentId}, 
             include: User, attributes: ["content", "streamerId"]})
-            res.send(commentId)
+            res.send(comment)
     } catch (error) {
 
         throw error
@@ -24,7 +24,7 @@ const GetCommentById = async ( req, res) => {
 
 const PostComment = async (req, res) => {
     try {
-        let userId = parseint(req.params.user_id)
+        let userId = parseInt(req.params.user_id)
         let streamerId = parseInt(req.params.streamer_id)
         let newComment = {
             userId,

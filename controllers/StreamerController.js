@@ -15,7 +15,6 @@ const GetStreamers = async (req, res) => {
 const GetStreamerDetails = async (req, res) => {
     try{
         let streamerId = parseInt(req.params.streamer_id)
-        // console.log(typeof streamerId)
         const streamerDetails = await Streamer.findOne({ where:{id: streamerId}})
         console.log(streamerDetails)
         res.send(streamerDetails)
@@ -41,12 +40,12 @@ const AddStreamer = async (req, res) => {
 }
 
 
-const DeleteStreamer = async (req, res) => {
+const UpdateStreamer = async (req, res) => {
     try {
         let streamerId = parseInt(req.params.streamer_id)
-
-        await Streamer.destroy({ where: { id: streamerId } })
-        res.send({ message: ` You have removed streamer $streamerId`})
+        const updateStreamer =
+        await Streamer.update( req.body, { where: { id: streamerId } })
+        res.send(updateStreamer)
     } catch (error) {
         throw error
     }
@@ -56,5 +55,5 @@ module.exports = {
     GetStreamers,
     GetStreamerDetails,
     AddStreamer,
-    DeleteStreamer
+    UpdateStreamer
 }
