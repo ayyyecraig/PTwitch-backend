@@ -85,6 +85,7 @@ module.exports = {
           createdAt: new Date(),
           updatedAt: new Date()  
          },
+         
          {
           name: 'Juansguarnizo',
           userId: 0,
