@@ -60,7 +60,7 @@ module.exports = {
           userId: 0,
           contentType: 'Path of Exile',
           schedule: 'Unlikely to stream on Saturdays',
-          img: 'https://duckduckgo.com/?q=path+of+exile+twitch&t=chromentp&atb=v321-1&iar=images&iax=images&ia=images&iai=https%3A%2F%2Fsiddgames.ru%2Fewr-porta%2Fattachments%2Fboxwu6n_1_-png.5836%2F',
+          img: 'http://www.capsulecomputers.com.au/wp-content/gallery/Path-Of-Exile/path-of-exile-logo-02.jpg',
           status: true,
           createdAt: new Date(),
           updatedAt: new Date()  
@@ -110,7 +110,7 @@ module.exports = {
           userId: 0,
           contentType: 'Just Chatting',
           schedule: 'Sundays',
-          img: 'https://duckduckgo.com/?q=+%EC%8A%88%EC%B9%B4%EC%9B%94%EB%93%9C+(torona1)+twitch&t=chromentp&atb=v321-1&iar=images&iax=images&ia=images&iai=https%3A%2F%2Fstatic-cdn.jtvnw.net%2Fjtv_user_pictures%2Fefa02ddd-0973-491c-b69e-3158966f956b-profile_image-300x300.jpg',
+          img: 'https://yt3.ggpht.com/a/AATXAJyVFYp_z4FqQzPYDJkZJjwRyUgbyWG4JiAGXA=s100-c-k-c0xffffffff-no-rj-mo',
           status: true,
           createdAt: new Date(),
           updatedAt: new Date()  

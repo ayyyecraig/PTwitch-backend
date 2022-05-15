@@ -11,7 +11,6 @@ const GetComment = async (req, res) => {
 
 const GetCommentById = async ( req, res) => {
     try{  
-     
         let commentId = parseInt(req.params.comment_id)
         let comment = await Comment.findOne({where: {id: commentId}, 
             include: User, attributes: ["content", "streamerId"]})
@@ -22,10 +21,9 @@ const GetCommentById = async ( req, res) => {
     }
 }
 
-const PostComment = async (req, res) => {
+const CreateComment = async (req, res) => {
     try {
         let userId = parseInt(req.params.user_id)
-        console.log(req.params.user_id, "here")
         let streamerId = parseInt(req.params.streamer_id)
         let newComment = {
             userId,
@@ -64,7 +62,7 @@ const DeleteComment = async (req, res) => {
 module.exports = {
     GetComment,
     GetCommentById,
-    PostComment,
+    CreateComment,
     UpdateComment,
     DeleteComment
 }

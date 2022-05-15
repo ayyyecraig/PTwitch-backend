@@ -1,14 +1,13 @@
-const { User, Playlist} = require('../models')
+const { User} = require('../models')
 
 
 
 const GetUser = async (req, res) => {
     try {
-        const allUsers = await User.findAll( {
-            include: [{model: Playlist}] 
-        })
-        console.log(allUsers)
-        res.send(allUsers)
+        
+        const Users = await User.findAll()
+        res.send(Users)
+        console.log(Users, "four")
     } catch (error) {
         throw error
     }
@@ -16,8 +15,9 @@ const GetUser = async (req, res) => {
 
 const  GetUserById = async (req, res) => {
     try{
+        console.log(req.params.user_id, "five")
         let userId = parseInt(req.params.user_id)
-        const user = await User.findOne({where: {id: userId}})
+        const user = await User.findByPk(userId)
         res.send(user)
 
     } catch (error) {
