@@ -26,7 +26,7 @@ const GetStreamerDetails = async (req, res) => {
 const AddStreamer = async (req, res) => {
     try {
         let userId = parseInt(req.params.user_id)
-
+        console.log(req.params.user_id, here)
         let streamerList = {
             userId,
              ...req.body
