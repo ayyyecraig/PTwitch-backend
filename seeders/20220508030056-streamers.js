@@ -266,15 +266,165 @@ module.exports = {
           updatedAt: new Date()  
          },
          {
-          name: 'duki',
+          name: 'buster',
           userId: 0,
-          contentType: 'Special Events',
-          schedule: 'Fridays',
-          img: 'https://i.ytimg.com/vi/LvAStgWCTjk/maxresdefault.jpg',
+          contentType: 'Virtual Casino, Just Chatting',
+          schedule: 'Daily',
+          img: 'https://static-cdn.jtvnw.net/jtv_user_pictures/96d66837-22f0-4393-89c5-2e5c2408485b-profile_image-300x300.png',
           status: true,
           createdAt: new Date(),
           updatedAt: new Date()  
-         }
+         },
+         {
+          name: 'AustinShow',
+          userId: 0,
+          contentType: 'Just Chatting',
+          schedule: 'Daily',
+          img: 'https://static-cdn.jtvnw.net/jtv_user_pictures/9e894c05-6131-4414-bf01-a65e9f88b13a-profile_image-300x300.png',
+          status: true,
+          createdAt: new Date(),
+          updatedAt: new Date()  
+         },
+         {
+          name: '악어 (jdm2088)',
+          userId: 0,
+          contentType: 'Gaming- Minecraft, LOL',
+          schedule: 'Unlikely to stream in Saturdays',
+          img: 'https://streamers.zone/wp-content/uploads/2020/05/jdm2088-profile_image-c46fd83bd8115db2-300x300-1.png',
+          status: true,
+          createdAt: new Date(),
+          updatedAt: new Date()  
+         },
+         {
+          name: 'bratishkinoff',
+          userId: 0,
+          contentType: 'Just Chatting',
+          schedule: 'Daily',
+          img: 'https://twitchgid.ru/wp-content/uploads/2020/04/Bratishkin-twich-1.jpg',
+          status: true,
+          createdAt: new Date(),
+          updatedAt: new Date()  
+         },
+         {
+          name: 'Emiru',
+          userId: 0,
+          contentType: 'Just Chatting, Gaming-LOL',
+          schedule: 'Unlikely to stream on Sunday',
+          img: 'https://gamespredator.com/wp-content/uploads/2020/08/EghRmnnUwAAqVaE.jpeg',
+          status: true,
+          createdAt: new Date(),
+          updatedAt: new Date()  
+         },
+         {
+          name: 'Lirik',
+          userId: 0,
+          contentType: 'Just Chatting, Gaming-Loot River',
+          schedule: 'Unlikely to stream on Thursday',
+          img: 'https://cdn-images.win.gg/resize/w/1115/h/630/format/jpg/type/progressive/fit/cover/path/news/722caafb4825ef5d8670710fa29087cf/e3b53018007035a277a333632cd9fabf/original.jpg',
+          status: true,
+          createdAt: new Date(),
+          updatedAt: new Date()  
+         },
+         {
+          name: 'LLA',
+          userId: 0,
+          contentType: ' Gaming-LOL',
+          schedule: 'Unlikely to stream on Thursday, and Tuesdays',
+          img: 'https://www.aventurasnerd.com/wp-content/uploads/2021/06/LLA-Clausura.png',
+          status: true,
+          createdAt: new Date(),
+          updatedAt: new Date()  
+         },
+         {
+          name: 'Chica',
+          userId: 0,
+          contentType: ' Gaming- Fortnite, Phasmophobia',
+          schedule: 'Daily',
+          img: 'https://nexter.org/wp-content/uploads/sites/3/2019/03/coolest-Female-Fortnite-Players-pics9.jpg',
+          status: true,
+          createdAt: new Date(),
+          updatedAt: new Date()  
+         },
+         {
+          name: '우왁굳 (woowakgood) ',
+          userId: 0,
+          contentType: ' Gaming- VALORANT/ Just Chatting',
+          schedule: 'Daily',
+          img: 'https://static-cdn.jtvnw.net/jtv_user_pictures/ebc60c08-721b-4572-8f51-8be7136a0c96-profile_image-300x300.png',
+          status: true,
+          createdAt: new Date(),
+          updatedAt: new Date()  
+         },
+         {
+          name: 'Toniki ',
+          userId: 0,
+          contentType: ' Gaming- Overwatch',
+          schedule: 'Daily',
+          img: 'https://yt3.ggpht.com/a/AATXAJzuouXFYm9F7_IR1zIWef5iMPUioUsTO1NRaQ=s900-c-k-c0xffffffff-no-rj-mo',
+          status: true,
+          createdAt: new Date(),
+          updatedAt: new Date()  
+         },
+         {
+          name: 'Jerma985 ',
+          userId: 0,
+          contentType: ' Gaming- Dinosaur Fossil Hunter, Just Chatting',
+          schedule: 'Daily',
+          img: 'https://yhstars.com/wp-content/uploads/2020/11/Jerma985-e1606566643924.png',
+          status: true,
+          createdAt: new Date(),
+          updatedAt: new Date()  
+         },
+         {
+          name: 'buddha ',
+          userId: 0,
+          contentType: ' Gaming',
+          schedule: 'Often Daily',
+          img: 'https://static-cdn.jtvnw.net/jtv_user_pictures/7f1cd66d-f145-4a0f-8e0e-5196c9c87410-profile_image-300x300.png',
+          status: true,
+          createdAt: new Date(),
+          updatedAt: new Date()  
+         },
+         {
+          name: 'deepins02 ',
+          userId: 0,
+          contentType: ' Gaming/ Just Chatting',
+          schedule: 'Unlikely to stream on Thursdays',
+          img: 'https://i.ytimg.com/vi/SKzJao0ujv8/maxresdefault.jpg',
+          status: true,
+          createdAt: new Date(),
+          updatedAt: new Date()  
+         },
+         {
+          name: 'Jasper7se',
+          userId: 0,
+          contentType: ' Gaming- Rust',
+          schedule: 'Unlikely to stream on Thursdays',
+          img: 'https://yt3.ggpht.com/a-/AAuE7mBfaQVvVfbZXkGXhDQAyYG8l_AHzqu_x88oOg=s900-mo-c-c0xffffffff-rj-k-no',
+          status: true,
+          createdAt: new Date(),
+          updatedAt: new Date()  
+         },
+         {
+          name: 'PayMoneyWubby',
+          userId: 0,
+          contentType: 'Chatting',
+          schedule: 'Sunday, Wednesday, Tuesday, West Coast',
+          img: 'https://i.ytimg.com/vi/MsD83nwwu5I/maxresdefault.jpg',
+          status: true,
+          createdAt: new Date(),
+          updatedAt: new Date() 
+         },
+         {
+           name: 'HasanPiker',
+           userId: 0,
+           contentType: 'Chatting',
+           schedule: 'a lot',
+           img: 'https://i.ytimg.com/vi/qwMDOdR5MqQ/maxresdefault.jpg',
+           status: true,
+           createdAt: new Date(),
+           updatedAt: new Date() 
+          },
       ]
     )
     
