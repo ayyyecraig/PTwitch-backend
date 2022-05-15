@@ -2,7 +2,7 @@ const { Comment, User} = require('../models')
 
 const GetComment = async (req, res) => {
     try {
-        const comments = await Comment.findAll({attributes: ["content", "streamerId"]})
+        const comments = await Comment.findAll({include: User})
         res.send(comments)
     } catch (error) {
         throw error
@@ -13,7 +13,7 @@ const GetCommentById = async ( req, res) => {
     try{  
         let commentId = parseInt(req.params.comment_id)
         let comment = await Comment.findOne({where: {id: commentId}, 
-            include: User, attributes: ["content", "streamerId"]})
+            include: User, attributes: ["content", "streamerId", "userId"]})
             res.send(comment)
     } catch (error) {
 
