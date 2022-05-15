@@ -2,7 +2,7 @@ const { Comment, User} = require('../models')
 
 const GetComment = async (req, res) => {
     try {
-        const comments = await Comment.findAll()
+        const comments = await Comment.findAll({include: User})
         res.send(comments)
     } catch (error) {
         throw error
