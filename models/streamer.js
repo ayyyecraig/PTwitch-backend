@@ -8,6 +8,7 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
 
       Streamer.belongsTo(models.User, { foreignKey:'userId'})
+      Streamer.hasMany(models.Comment, { foreignKey:'userId'})
 
     }
   }
