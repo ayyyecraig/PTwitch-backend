@@ -36,9 +36,14 @@ const CreateComment = async (req, res) => {
 }
 
 const UpdateComment = async (req, res) => {
-    try {
+    try { 
+        console.log(req.body)
         let commentId = parseInt(req.params.comment_id)
-        const updatedComment = await Comment.update(req.body, {where: { id: commentId } })
+      
+        const updatedComment = await Comment.update({content: req.body.content}, {returning: true, where: { id: commentId } }) 
+        //    await updatedComment.save()
+         console.log(updatedComment, "--------------*")
+        
         res.send(updatedComment)
     } catch (error){
         throw error

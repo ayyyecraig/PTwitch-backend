@@ -7,7 +7,7 @@ An app to compliment your twitch experience -- Parellel to Twitch
 
 ***
 
-
+[FrontEnd](https://github.com/ayyyecraig/Ptwitch)
 Twitch is fun site for streamers and something millions of people enjoy using to peer into peoples live's. Streamers especially twitch streamers are starting to hit peak popularity, from scandels to award shows its hard to deny the appeal. Just like music, the amount of streamers and streams is immeasurable, reaching a new stream is hard without a good reference or scandal to bring you into it. That's what PTwitch is hoping to close the gap in..
 
 
@@ -21,7 +21,7 @@ Taking the chance to round out my experience with a PERN stack, I will be tackli
 
 ### Technologies                          
 * React                                
-* Sequelize                                              
+* Sequelize                                            
 * Postgres
 * CSS/ HTML
 * Heroku 
